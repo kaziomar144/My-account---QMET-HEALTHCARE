@@ -67,6 +67,10 @@
                 i{
                     font-size: 20px;
                 }
+
+                @include mq('phone-wide', 'max'){
+                    margin-right: 18px;
+                }
             }
 
             // =====logo area=====

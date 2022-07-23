@@ -141,6 +141,12 @@ img {
   font-size: 20px;
 }
 
+@media only screen and (max-width: 479px) {
+  #headerWrap .mainHeader .mainHeaderLeft .navbarIcon {
+    margin-right: 18px;
+  }
+}
+
 #headerWrap .mainHeader .mainHeaderLeft .logo {
   max-width: 100%;
   width: 100%;
