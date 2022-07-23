@@ -285,6 +285,12 @@ img {
   top: 100% !important;
 }
 
+@media only screen and (max-width: 991px) {
+  #headerWrap .mainHeader .mainHeaderRight ul.headerIcon > li .dropdown-menu {
+    display: none;
+  }
+}
+
 #headerWrap .mainHeader .mainHeaderRight ul.headerIcon > li .dropdown-menu .registerSingInInner {
   min-width: 220px;
   text-align: center;
@@ -427,6 +433,7 @@ img {
 
 #siteContent {
   margin-bottom: 2.857em;
+  overflow: hidden;
 }
 
 #siteContent .breadcrumb {
@@ -696,6 +703,7 @@ img {
 #footerWrap {
   background-color: #f8f8f8;
   padding-bottom: 17px;
+  overflow: hidden;
 }
 
 @media only screen and (max-width: 991px) {
@@ -745,7 +753,7 @@ img {
 
 @media only screen and (max-width: 991px) {
   #footerWrap .footerTop .footerSocialIcon ul li {
-    margin-right: 35px;
+    margin-right: 25px;
   }
 }
 
@@ -764,6 +772,10 @@ img {
 
 #footerWrap .footerTop .footerSocialIcon ul li:hover a {
   color: var(--i);
+}
+
+#footerWrap .footerTop .footerSocialIcon ul li:last-child {
+  margin-right: 0;
 }
 
 #footerWrap .footerTop .footerLinks h4 {

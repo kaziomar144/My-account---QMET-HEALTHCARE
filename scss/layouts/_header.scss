@@ -1,4 +1,5 @@
 #headerWrap{
+    // overflow: hidden;
     .topHeader{
         border-bottom: 1px solid $grayColor;
         display: none;
@@ -190,6 +191,10 @@
                     right: -50px!important;
                     left: auto!important;
                     top: 100%!important;
+
+                    @include mq('tablet-wide','max'){
+                        display: none;
+                    }
                     .registerSingInInner{
                         min-width: 220px;
                         text-align: center;

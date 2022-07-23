@@ -1,6 +1,7 @@
 #footerWrap{
     background-color: #f8f8f8;
     padding-bottom: 17px;
+    overflow: hidden;
     @include mq('tablet-wide','max'){
         background-color: #eaeaea;
     }
@@ -27,7 +28,7 @@
                 li{
                     margin-right: 20px;
                     @include mq('tablet-wide','max'){
-                        margin-right: 35px;
+                        margin-right: 25px;
                     }
                     a{
                         color: #7c7c7c;
@@ -39,6 +40,9 @@
                     }
                     &:hover a{
                         color: var(--i);
+                    }
+                    &:last-child{
+                        margin-right: 0;
                     }
                 }
             }
