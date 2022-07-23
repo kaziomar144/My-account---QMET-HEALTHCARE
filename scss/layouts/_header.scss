@@ -99,12 +99,12 @@
             }
             form{
                 width: 100%;
-                border: 1px solid #F85213;
+                border: 1px solid $primaryColor;
                 padding: 6px 20px;
                 border-radius: 50px;
                 position: relative;
                 @include mq('tablet-wide'){
-                    border: 2px solid #F85213;
+                    border: 2px solid $primaryColor;
                     padding: 6px 20px;
                 }
                 input{
@@ -314,4 +314,34 @@
             }
         }
     }
+}
+
+
+/* Mobile Menu*/
+
+.mobileMenu{
+    // display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #FDFCFC;
+    width: 70%;
+    height: 100%;
+    overflow-y: auto;
+    z-index: 1000000;
+    .menuClose{
+        display: block;
+        background: rgb(213, 70, 70);
+    }
+    ul{
+
+        li{
+            display: block;
+            padding: 10px 5px;
+        }
+    }
+}
+
+.show{
+    display: block;
 }
