@@ -1,0 +1,144 @@
+#footerWrap{
+    background-color: #f8f8f8;
+    padding-bottom: 17px;
+    @include mq('tablet-wide','max'){
+        background-color: #eaeaea;
+    }
+    .footerTop{
+        
+        padding: 4.28em 0 4.44em 0;
+        @include mq('tablet-wide','max'){
+            background-color: #eaeaea;
+            padding: 4.28em 0 0;
+        }
+
+        .footerSocialIcon{
+
+            @include mq('tablet-wide','max'){
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 45px 0 20px;
+            }
+            ul{
+                display: flex;
+                align-items: center;
+
+                li{
+                    margin-right: 20px;
+                    @include mq('tablet-wide','max'){
+                        margin-right: 35px;
+                    }
+                    a{
+                        color: #7c7c7c;
+                        font-size: 1.571em;
+                        transition: color 0.3s;
+                        @include mq('tablet-wide','max'){
+                            color: var(--i);
+                        }
+                    }
+                    &:hover a{
+                        color: var(--i);
+                    }
+                }
+            }
+        }
+
+        .footerLinks{
+            h4{
+                font-size: 1.143em;
+                line-height: 1.125em;
+                margin-bottom: 1.6em;
+                font-weight: 700;
+            }
+
+            ul li{
+                line-height: 28px;
+                a{
+                    color: $textColor;
+                    transition: color 0.3s;
+                    &:hover{
+                        color: $primaryColor;
+                    }
+                }
+            }
+        }
+    }
+
+    .footerCallUs{
+        margin-bottom: 3em;
+
+        @include mq('tablet-wide','max'){
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+        .callUsIcon{
+            padding-right: 20px;
+            color: $primaryColor;
+            i{
+                font-size: 4.643em;
+            }
+        }
+
+        .callUsText{
+            font-weight: 300;
+            font-size: .929em;
+            display: block;
+            line-height: 1.429em;
+        }
+        .callUsNumber{
+            font-size: 1.571em;
+            display: block;
+            line-height: 1.429em;
+            a{
+                color: $textColor;
+                transition: color 0.3s;
+                &:hover{
+                    color: $primaryColor;
+                }
+            }
+        }
+    }
+
+    .footerBottom{
+        // width: 100vw;
+        position: relative;
+        // margin-left: calc(-50vw + 50% - 8px);
+        line-height: 3em;
+        background-color: #eaeaea;
+        padding: .1em 0;
+        @include mq('tablet-wide','max'){
+            background-color: #fff;
+        }
+        .footerCopyright{
+            p{
+
+                a{
+                    font-weight: 700;
+                    color: $textColor;
+                }
+            }
+            
+        }
+        .paymentLogo{
+            margin-left: 50px;
+            @include mq('tablet-wide','max'){
+                margin: 0;
+            }
+            ul{
+                list-style: none;
+                display: flex;
+                flex-wrap: wrap;
+                padding-bottom: 20px;
+                @include mq('tablet-wide','max'){
+                    padding-top: 30px;
+                }
+                li{
+                    padding: 0 15px !important;
+                }
+            }
+        }
+    }
+}

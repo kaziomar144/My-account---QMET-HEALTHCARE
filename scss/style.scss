@@ -1,0 +1,19 @@
+@import './common';
+@import './variables';
+@import './mixins';
+//layouts
+@import './layouts/header';
+@import './layouts/site_content';
+@import './layouts/footer';
+
+body{
+    margin: 0;
+    font-family: $ff1;
+    font-size: .875rem;
+    font-weight: 400;
+    line-height: 1.714;
+    color: $textColor;
+    background-color: $white;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+}

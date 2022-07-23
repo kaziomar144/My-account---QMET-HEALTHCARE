@@ -1,0 +1,80 @@
+// Push auto
+@mixin push--auto {
+    margin: { 
+        left: auto;
+        right: auto;
+    }
+}
+
+// Pseudo
+@mixin pseudo($display: block, $pos: absolute, $content: ''){
+    content: $content;
+    display: $display;
+    position: $pos;
+}
+
+// Responsive ratio
+@mixin responsive-ratio($x,$y, $pseudo: false) {
+    $padding: unquote( ( $y / $x ) * 100 + '%' );
+    @if $pseudo {
+        &:before {
+            @include pseudo($pos: relative);
+            width: 100%;
+            padding-top: $padding;
+        }
+    } @else {
+        padding-top: $padding;
+    }
+}
+
+// Media queries
+
+$breakpoints: (
+    "phone":        400px,
+    "phone-wide":   480px,
+    "phablet":      560px,
+    "tablet-small": 640px,
+    "tablet":       768px,
+    "tablet-wide":  992px,
+    "desktop":      1248px,
+    "desktop-wide": 1440px
+);
+@mixin mq($width, $type: min) {
+    @if map_has_key($breakpoints, $width) {
+        $width: map_get($breakpoints, $width);
+        @if $type == max {
+            $width: $width - 1px;
+        }
+        @media only screen and (#{$type}-width: $width) {
+            @content;
+        }
+    }
+}
+
+@mixin fontPack($fontSize: 0,$fontWeight: 0,$lineHight: 0) {
+    @if $fontSize > 0 {
+      font-size : $fontSize#{px};
+    }
+    @if $fontWeight > 0 {
+      font-weight : $fontWeight;
+    }
+    @if $lineHight > 0 {
+      line-height : $lineHight#{px};
+    }
+    
+  }
+  
+  @mixin widthHeight($width,$hight) {
+    width: $width;
+    height: $hight;
+  }
+  
+  @mixin  square($size) {
+    width: $size;
+    height: $size;
+  }
+  @mixin  circle($size) {
+    width: $size;
+    height: $size;
+    border-radius: 50%;
+  }
