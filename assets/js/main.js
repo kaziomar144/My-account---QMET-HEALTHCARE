@@ -4,17 +4,22 @@ const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstra
 
 /** Mobile Menu */
 
-// $(document).ready(function () {
-//   let _mobileMenu = $('.mobileMenu');
-//   let _this = $(this);
-//   $('#mobileNav').click(function (e) { 
-//     e.preventDefault();
+$(document).ready(function () {
+  let _mobileMenu = $('.mobileMenu');
+  let _this = $(this);
+  _mobileMenu.removeClass('open');
+  $('#mobileNav').click(function (e) { 
+    e.preventDefault();
     
-//     let _nav = $('.mobileHandheldDepertment').html();
-//     _mobileMenu.addClass(className);
-//     _mobileMenu.html(_nav);
-//     // _mobileMenu.prepend("");
+    let _nav = $('.mobileHandheldDepertment').html();
+
+    // console.log(_nav);
+    _mobileMenu.addClass('open');
+    _mobileMenu.html(_nav);
+    _mobileMenu.prepend('<div id="menuClose"><a href="#" id="button"><i class="fa-solid fa-xmark"></i></a></div>');
    
-//   });
- 
-// });
+  });
+  $(document).on('click','#button',function(){
+    _mobileMenu.removeClass('open');
+  })
+});

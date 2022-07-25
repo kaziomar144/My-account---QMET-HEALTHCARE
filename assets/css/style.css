@@ -441,26 +441,67 @@ img {
 .mobileMenu {
   position: fixed;
   top: 0;
-  left: 0;
-  background: #FDFCFC;
-  width: 70%;
-  height: 100%;
-  overflow-y: auto;
+  left: -320px;
+  width: 320px;
+  height: 100vh;
+  background-color: #fff;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  z-index: 100000;
+  -webkit-box-shadow: 3px 5px 14px -3px rgba(0, 0, 0, 0.11);
+  box-shadow: 3px 5px 14px -3px rgba(0, 0, 0, 0.11);
+  overflow-x: hidden;
   z-index: 1000000;
 }
 
-.mobileMenu .menuClose {
-  display: block;
-  background: #d54646;
+.mobileMenu #menuClose {
+  border-bottom: 1px solid #ddd;
+  height: 50px;
+  position: relative;
+}
+
+.mobileMenu #menuClose #button {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  border-left: 1px solid #eee;
+  text-align: center;
+  line-height: 50px;
+  color: #666;
+  font-size: 22px;
 }
 
 .mobileMenu ul li {
-  display: block;
-  padding: 10px 5px;
+  position: relative;
+  padding: 0 20px;
+  border-bottom: 1px solid #ddd;
+  -webkit-transition: all linear 0.3s;
+  transition: all linear 0.3s;
 }
 
-.show {
-  display: block;
+.mobileMenu ul li a {
+  line-height: 50px;
+  color: #333e48;
+}
+
+.mobileMenu ul li a .navIcon {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  margin-bottom: 5px;
+  margin-right: 5px;
+  font-size: 17px;
+  vertical-align: middle;
+}
+
+.open {
+  left: 0;
 }
 
 #siteContent {
